@@ -1,0 +1,30 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class CheckBoxExample {
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            createAndShowGUI();
+        });
+    }
+
+    private static void createAndShowGUI() {
+        JFrame frame = new JFrame("Checkbox Example");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        JPanel panel = new JPanel();
+        panel.setLayout(new FlowLayout());
+
+        JCheckBox checkBox1 = new JCheckBox("Checkbox 1");
+        JCheckBox checkBox2 = new JCheckBox("Checkbox 2");
+        JCheckBox checkBox3 = new JCheckBox("Checkbox 3");
+
+        panel.add(checkBox1);
+        panel.add(checkBox2);
+        panel.add(checkBox3);
+
+        frame.add(panel);
+        frame.setSize(300, 200);
+        frame.setVisible(true);
+    }
+}
